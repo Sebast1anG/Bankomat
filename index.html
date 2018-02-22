@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html>
+<HEAD>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</HEAD>
+<body onload="start();">
+
+     <div id="container">
+         <div id="interface">
+             <div class="buttonL">
+                 <div><input type="submit" class="btn btn-success" value="Wplata" class="buttonLi" id="depositButton" onclick="actionListener('deposit'); alert('Wplacasz pieniadze!');"></div>
+                 <div><input type="submit"  class="btn btn-info" value="Wyplata" id="withdrawButton" onclick="actionListener('withdraw'); alert('Wyplacasz pieniadze!');"></div>
+             </div>
+
+             <div id="screen">
+             </div>
+             <div class="buttonR">
+                 <div><input type="submit"  class="btn btn-primary" value="Stan konta" id="accountCheckButton" onclick="actionListener('accountStatus');"></div>
+                 <div><input type="submit" class="btn btn-danger" value="Wyjdz" id="exitButton" onclick="actionListener('exit');"></div>
+             </div>
+         </div>
+            <div style="clear: both;"></div>
+         <div class="keyboard">
+             <div><input type="button" class="numKey" id="key7" value="7" onclick="digitListener(this.value);"></div>
+             <div><input type="button" class="numKey" id="key8" value="8" onclick="digitListener(this.value);"></div>
+             <div><input type="button" class="numKey" id="key9" value="9" onclick="digitListener(this.value);"></div>
+                <div style="clear: both;"></div>
+             <div><input type="button" class="numKey" id="key4" value="4" onclick="digitListener(this.value);"></div>
+             <div><input type="button" class="numKey" id="key5" value="5" onclick="digitListener(this.value);"></div>
+             <div><input type="button" class="numKey" id="key6" value="6" onclick="digitListener(this.value);"></div>
+                <div style="clear: both;"></div>
+             <div><input type="button" class="numKey" id="key1" value="1" onclick="digitListener(this.value);"></div>
+             <div><input type="button" class="numKey" id="key2" value="2" onclick="digitListener(this.value);"></div>
+             <div><input type="button" class="numKey" id="key3" value="3" onclick="digitListener(this.value);"></div>
+                <div style="clear: both;"></div>
+             <div><input type="button" class="numKey" id="key0" value="0" onclick="digitListener(this.value);"></div>
+             <div><input type="button" id="keyDelete" value="<-" onclick="digitListener('delete');"></div>
+                <div style="clear: both;"></div>
+             <div><input type="submit" id="keyOk" value="OK" onclick="actionListener('keyOk');"></div>
+           
+             <div><input type="submit" id="keyCancel"value="Anuluj"></div>
+         </div>
+
+
+         <div class="slot">
+             <div><input type="submit" id="cardSlot" class="btn btn-warning" value="card" onclick="actionListener('insertCard');"></div>
+             <div id="moneySlot">:</div>
+         </div>
+            <div style="clear: both;"></div>
+     </div>
+
+
+
+ </body>
+</html>
